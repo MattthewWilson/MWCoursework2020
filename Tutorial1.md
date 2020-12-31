@@ -26,3 +26,36 @@ public class mainMenuScript : MonoBehaviour
     }
 }
 ```
+Before it will work we will need to hook it up to the menu button, but first we will add the function to handle quitting the game too. It will look like this:
+```
+public void QuitGame ()
+    {
+
+    }
+```
+Inside this add the line "Application.Quit();" which will close the game. As this is not visible in the editor, only when the game is built, you can add the line "Debug.Log("Quit!");" to check that it is working in the consol. When you are done your script should look like this:
+```
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class mainMenuScript : MonoBehaviour
+{
+    public void PlayGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void QuitGame()
+    {
+        Debug.Log("Quit!");
+        Application.Quit();
+    }
+}
+
+```
+
+Next we will attach these two fuctions to their associated menu buttons. Select the play button, in the inspector under the button component there will be a section that says "On Click()". Click the plus button to add a new On Click event. Drag and drop the mainMenu object into the box that says "None (Object)" Then in the "No Function" dropdown select mainMenuScript then PlayGame (). If you run the project and click on the button it will now open the second scene listed in the build settings. Note that if you have not added a second scene this will not work. For the sake of this tutorial I will be using a placeholder scene.
+
+For the exit button, do this same process again but use QuitGame () in the on click event. The options button will be covered in the next tutorial.
