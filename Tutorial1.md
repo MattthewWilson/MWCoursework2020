@@ -1,4 +1,4 @@
-## Tutorial One
+## Tutorial One - Main Menu UI
 
 This tutorial will cover the creation of a basic main menu. To begin, create a new canvas in the hierarchy. It can be found under UI. Under the canvas create a panel. In the image component of the of the panel, which can be found in the inspector, set the source image to none and the colour to a dark tone with full opacity. This will form the simple background of the menu.
 
