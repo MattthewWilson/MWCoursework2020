@@ -26,4 +26,13 @@ public void SetFullscreen (bool isFullscreen)
         Screen.fullScreen = isFullscreen;
     }
 ```
-Under UI, add a toggle to optionsMenu. Add an event to On Value Changed (Boolean) and use optionsMenu as the object and SetFullscreen as the method. this checkbox will now toggle fullscreen.
+Under UI, add a toggle to optionsMenu. Add an event to On Value Changed (Boolean), use optionsMenu as the object and SetFullscreen as the method. this checkbox will now toggle fullscreen.
+
+Next add a dropdown to optionsMenu, this will contain the quality settings. Inside the script create a new method with the following code.
+```
+public void SetQuality (int qualityIndex)
+    {
+        QualitySettings.SetQualityLevel(qualityIndex);
+    }
+```
+This will set the quality settings level to the value of "qualityIndex", which will be the value entered in the dropdown once it is connected. As previously, select the dropdown, add a new event, add optionsMenu as the object, and then select SetQuality as the function. Add as many options to the dropdown as there are quality settings,
