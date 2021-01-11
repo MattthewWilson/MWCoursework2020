@@ -10,7 +10,7 @@ To control the audio we will first need to be able to reference the volume from 
 
 Now open optionsMenuScript. First, void Update will not be used for this script and can be safely deleted to keep things tidy. Next the script will need to be able to use access things related to audio, to do this add the line "using UnityEngine.Audio;" to the top of the script, above where it says public class. Now create a new public variable of the type "AudioMixer" name it"audioMixer". Save the script and then select optionsMenu. Drag and drop mainMixer into the Audio Mixer slot that will now be open on optionsMenu. The audio mixer is now hooked up to the script.
 
-Next we need to use the script to connect the audio mixer with the slider. Create a new method and call it "SetVolume (float volume)". Within it add the line "audioMixer.SetFloat("volume", volume);". This line takes the volume parameter from the audio mixer and sets it to the value input by the method. The code should look as below
+Next we need to use the script to connect the audio mixer with the slider. Create a new method and call it "public void SetVolume (float volume)". Within it add the line "audioMixer.SetFloat("volume", volume);". This line takes the volume parameter from the audio mixer and sets it to the value input by the method. The code should look as below
 ```
 public void SetVolume (float volume)
     {
@@ -18,3 +18,12 @@ public void SetVolume (float volume)
     }
 ```
 Finally this method must be hooked up to the slider. To do this, select the slide and add an event to "On Value Changed (Single)". Drag optionsMenu into the "None (Object)" slot. Then under the "No fuction" dropdown choose "SetVolume" under optionsMenuScript, Dynamic float. Finally set the slider's Min Value to -80 and Max Value to 0, as these are the corresponding values used by the audio mixer.
+
+Next we will add a full screen toggle. Create a new method, name it "public void SetFullscreen (bool isFullscreen)". Within it add the line "Screen.fullScreen = isFullscreen;". This toggles fullscreen. The code should look as below.
+```
+public void SetFullscreen (bool isFullscreen)
+    {
+        Screen.fullScreen = isFullscreen;
+    }
+```
+Under UI, add a toggle to optionsMenu. Add an event to On Value Changed (Boolean) and use optionsMenu as the object and SetFullscreen as the method. this checkbox will now toggle fullscreen.
