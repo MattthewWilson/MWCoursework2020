@@ -28,3 +28,22 @@ public void Resume()
         Cursor.visible = false;
     }
 ```
+We now have the functionality to pause and resume the game. Now we need to make that functionality usable. To do that, add a new if statement to void Update(). It should say "if (Input.GetKeyDown(KeyCode.Escape))" This will check if the escape key is being pressed. Note that you can use any other key, escape is just the one that I will be using in this instance. If escape is pressed we will want to run an if else statement to check if the game is already paused or not. For this we can use the gameIsPaused variable that was created earlier. if the game is paused run Resume(); else run Pause(); It should look as below:
+```
+void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (gameIsPaused)
+            {
+                Resume();
+            }
+            else
+            {
+                Pause();
+            }
+        }
+    }
+
+```
+The game can now be paused and unpaused by pressing escape. To make the resume button work, add an on click event to it, add pauseMenu as the object and Resume() as the function. To add functionality to the main menu and exit buttons you can use the same methods as described in the main menu tutorial.
