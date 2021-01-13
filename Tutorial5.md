@@ -8,9 +8,9 @@ First we will need to check if the game is over. Do this with an if statement in
 ```
 if (TimerSystem.timeRemaining == 0)
 ```
-In this case we are checking in the value of the timeRemaining variable inside of the TimerSystem script from the previous tutorial is equal to zero. If it is we will trigger the game being over. To do this create a new function and call it "gameOver()". This function will act almost same as the pause function in the pause menu, but will instead set the gameOverUI to active.
+In this case we are checking in the value of the timeRemaining variable inside of the TimerSystem script from the previous tutorial is equal to zero. If it is we will trigger the game being over. To do this create a new function and call it "gameover()". This function will act almost same as the pause function in the pause menu, but will instead set the gameOverUI to active.
 ```
-public void Pause()
+public void gameover()
     {
         GameOverUI.SetActive(true);
         Time.timeScale = 0f;
