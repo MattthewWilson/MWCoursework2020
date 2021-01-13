@@ -19,7 +19,7 @@ Next add an if statement. Check "if (timer <= 0)" then if that is true "timer = 
 
 The final step is to connect this to the text mesh pro created at the start. Create a new variable "public GameObject timerText". Save and then in the inspector add the text mesh pro object into the new game object slot. Now add a new line into the if statement "timerText.GetComponent<TextMeshProUGUI>().text = "Time: " + timeRemaining;" This will get the text from the timerText game object change it to say "Time:" and then the value of the timeRemaining variable. It should be noted that if you are using text mesh pro you will need to add the line "using TMPro;". The script should look like this:
 ```
-  using UnityEngine;
+using UnityEngine;
 using TMPro;
 
 public class timerSystemScript : MonoBehaviour
