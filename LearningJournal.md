@@ -12,8 +12,7 @@ During the winter holiday I finally made the first tutorial. I decided it would 
 
 #### Tutorial 1
 
-The tutorial was relatively easy to make. Most of the time making it was spent watching tutorials. The process I used was more or less to learn how to create the script through tutorials, then to create it, referencing the tutorials whenever I was uncertain about something. And finally to write it down as a tutorial, referencing back to both the work I had done and the tutorials to ensure everthing was correct. In retrospect this was slower than just making the tutorial at the same time as learning to make the script. However, I feel this slow process did at least have the benifit of 
-
+The tutorial was relatively easy to make. Most of the time making it was spent watching tutorials. The process I used was more or less to learn how to create the script through tutorials, then to create it, referencing the tutorials whenever I was uncertain about something. And finally to write it down as a tutorial, referencing back to both the work I had done and the tutorials to ensure everthing was correct. In retrospect this was slower than just making the tutorial at the same time as learning to make the script. However, I feel this slow process did at least have the benifit of help to refinforcing what had been learned.
 #### Janurary
 
 This month was when most of the work on this module was done. Although I had to rush through it which likely harmed its quality, I was still able to get it all done in time. As mentioned before, it would in retrospect have been a better idea to get the work done earlier. However I still feel it turned out okay.
