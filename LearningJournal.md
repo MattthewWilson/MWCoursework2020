@@ -34,3 +34,4 @@ In this script I encountered a problem which although I resolved, I'm not sure t
 
 #### Tutorial 5
 
+I had one problem during the creation of this script that was frustrating at the time but made me feel rather silly once I figured out what it was. Upon either pressing retry or returning to menu and then retying the timer would be frozen. My first thought was that I obviously needed to reset the amount of time remaining when restarting the level. However this didn't seem to do anything. Eventually I realised my mistake: I was reseting the interger that displays the time remaining, but not the float that actually counts down. If there is a better way of doing the count down then doing so probably would have avoided this problem all together, which is something I'll keep in mind as something to look into should I ever need to create any similar scripts in the future.
