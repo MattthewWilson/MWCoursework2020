@@ -22,8 +22,15 @@ Although I did all the scripting covered in the remaining tutorials over decembe
 
 #### Tutorial 2
 
+This tutorial was relatively simple to make. I used the same procress as described earlier for tutorial one. The only difficulty I encountered was when I accidentally missed the step of adding the line ```using unityEngine.Audio;``` and proceeded to spend several minutes getting frustrated trying to figure out why it was not working. Once I rewatched the tutorial I realised my mistake. It wasn't a big deal, but did serve as a reminder of why it's important to pay close attention and double check all the required steps.
+
 #### Tutorial 3
+
+I encountered a strange problem while creating this script. This problem isn't in the script itself or in the unity project I created for this module, but rather a conflict with another script in the 3D game design project. The camera control script I was using, which I had gotten from standard assets, also contained a function for relocking and hiding the cursor. This would make clicking anywhere while paused disable the cursor and break things. I tried to edit the camera control script so that it would check if the game is paused and not interfer if it is. However this did not work for no apparent reason. After hours of searching online and experimenting trying to find a solution, I tried something desperate that I didn't think would do anything. I created a new script, and copied everything from the camera control script into it. This script worked fine. I do not know why or how. It was identical to the original in every way. I'd just about had it at that point, so I decided to just leave it and not risk breaking it.
 
 #### Tutorial 4
 
+In this script I encountered a problem which although I resolved, I'm not sure that my method was the best one available. However it was the only thing I could think of. The problem in question was with the count down. In order to make it consistant I needed to use ```Time.deltaTime```. This doesn't work with intergers though, so the value of the would have to be a float. I thought this would be fine, until I attached it to the UI. The UI would then desplay the time to several decimal places. This looked ugly and was not what I wanted. Maybe there's a way to stop this, but I'm not currently aware of it. I figured I'd have to find a way of counting down the time with a float variable, but then have a seperate interger variable to actually display. The best thing I could think to do was have a float repeatedly count down one second then reset, and have an interger count down each time. This way the interger could be used for the UI to display a counting down number with no decimals. 
+
 #### Tutorial 5
+
